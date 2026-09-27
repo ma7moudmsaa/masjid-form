@@ -92,8 +92,8 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);min-h
           <div class="q-sub">الموقع، المساحة، السعة، أي متطلبات خاصة، الميزانية التقديرية...</div>
           <div class="field"><textarea id="f-q1" placeholder="اكتب تفاصيل مشروعك هنا..." required></textarea></div>
           <div class="upload-zone" onclick="document.getElementById('fi1').click()" ondragover="handleDrag(event,'uz1')" ondragleave="handleDragLeave('uz1')" ondrop="handleDrop(event,'fi1','uz1')">
-            <input type="file" id="fi1" multiple accept="image/*,.pdf" onchange="handleFiles(this,'preview1')"/>  
-            <div class="uz-icon">🖼️</div><div class="uz-text">رفع صور أو ملفات (اختياري)</div><div class="uz-sub">PNG، JPG، PDF — يمكن رفع أكثر من ملف</div>
+            <input type="file" id="fi1" multiple accept="image/*,.pdf" onchange="handleFiles(this,'preview1')"/>
+            <div class="uz-icon">🖼️</div><div class="uz-text">رفع صور أو ملفات (اختياري)</div><div class="uz-sub">PNG، JPG، PDF</div>
           </div>
           <div class="files-preview" id="preview1"></div>
         </div>
@@ -102,8 +102,8 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);min-h
           <div class="q-sub">شاركنا أي استفسار حول ضمانات الجودة، المواد، أو التنفيذ</div>
           <div class="field"><textarea id="f-q2" placeholder="اكتب استفسارك عن الضمانات..." required></textarea></div>
           <div class="upload-zone" onclick="document.getElementById('fi2').click()" ondragover="handleDrag(event,'uz2')" ondragleave="handleDragLeave('uz2')" ondrop="handleDrop(event,'fi2','uz2')">
-            <input type="file" id="fi2" multiple accept="image/*,.pdf" onchange="handleFiles(this,'preview2')"/>  
-            <div class="uz-icon">📎</div><div class="uz-text">رفع مرفقات (اختياري)</div><div class="uz-sub">PNG، JPG، PDF — يمكن رفع أكثر من ملف</div>
+            <input type="file" id="fi2" multiple accept="image/*,.pdf" onchange="handleFiles(this,'preview2')"/>
+            <div class="uz-icon">📎</div><div class="uz-text">رفع مرفقات (اختياري)</div><div class="uz-sub">PNG، JPG، PDF</div>
           </div>
           <div class="files-preview" id="preview2"></div>
         </div>
@@ -112,8 +112,8 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);min-h
           <div class="q-sub">برأيك، أي المناطق والدول تحتاج مشاريع مساجد بشكل أكبر؟</div>
           <div class="field"><textarea id="f-q3" placeholder="شاركنا رأيك..." required></textarea></div>
           <div class="upload-zone" onclick="document.getElementById('fi3').click()" ondragover="handleDrag(event,'uz3')" ondragleave="handleDragLeave('uz3')" ondrop="handleDrop(event,'fi3','uz3')">
-            <input type="file" id="fi3" multiple accept="image/*,.pdf" onchange="handleFiles(this,'preview3')"/>  
-            <div class="uz-icon">🌍</div><div class="uz-text">رفع خرائط أو مرفقات (اختياري)</div><div class="uz-sub">PNG، JPG، PDF — يمكن رفع أكثر من ملف</div>
+            <input type="file" id="fi3" multiple accept="image/*,.pdf" onchange="handleFiles(this,'preview3')"/>
+            <div class="uz-icon">🌍</div><div class="uz-text">رفع خرائط أو مرفقات (اختياري)</div><div class="uz-sub">PNG، JPG، PDF</div>
           </div>
           <div class="files-preview" id="preview3"></div>
         </div>
@@ -124,20 +124,20 @@ body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);min-h
           <span class="btn-text">إرسال الاستفسار 🕌</span>
           <span class="spinner"></span>
         </button>
-        <div class="submit-note">جميع الحقول المشار إليها بـ * إلزامية — سيتم التواصل معك في أقرب وقت</div>
+        <div class="submit-note">جميع الحقول المشار إليها بـ * إلزامية</div>
       </div>
     </form>
     <div class="success-screen" id="success-screen">
       <div class="s-icon">✅</div>
       <h2>تم استلام استفسارك بنجاح!</h2>
-      <p>شكراً لك، سيتم مراجعة طلبك والتواصل معك قريباً.<br>يمكنك الاطلاع على ملف مرفقاتك من الرابط أدناه.</p>
+      <p>شكراً لك، سيتم مراجعة طلبك والتواصل معك قريباً.</p>
       <a href="#" id="drive-folder-link" class="drive-link" target="_blank">📁 عرض مجلدك في Drive</a>
     </div>
   </div>
-  <div class="form-footer">الخليج الرائدة × قطرة حياة &nbsp;—&nbsp; جميع الحقوق محفوظة</div>
+  <div class="form-footer">الخليج الرائدة × قطرة حياة — جميع الحقوق محفوظة</div>
 </div>
 <script>
-const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycby2xlvTGGOYrlrH5TCIGz0uPNweLwxoRzMA7Ib7I6AnBj6AtAx9X2K_fTwxeTmPLOTU/exec';
+const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbx1sFevfDWoaoHp6t9tuadgfK3-vNK256ZKje8kU8jCzeG5B2Mrd4d1N1WDXWncpkq9/exec';
 const PARENT_FOLDER_ID='1MclJsfPM9kAS53rqPHxDxbw_9uPqG9sR';
 const fileMap={fi1:[],fi2:[],fi3:[]};
 function handleFiles(input,previewId){const nf=Array.from(input.files);fileMap[input.id].push(...nf);renderPreview(input.id,previewId);updateProgress();}
@@ -162,12 +162,13 @@ try{
 const allFiles={};
 for(const[key,files]of Object.entries(fileMap)){if(files.length>0){allFiles[key]=await Promise.all(files.map(async f=>({name:f.name,type:f.type,data:await toBase64(f)})));}else{allFiles[key]=[];}}
 const payload={name,company,q1,q2,q3,files:allFiles,parentFolderId:PARENT_FOLDER_ID,timestamp:new Date().toLocaleString('ar-SA',{timeZone:'Asia/Riyadh'})};
-const res=await fetch(APPS_SCRIPT_URL,{method:'POST',body:JSON.stringify(payload)});
-const result=await res.json();
-if(result.status==='ok'){document.getElementById('main-form').style.display='none';const s=document.getElementById('success-screen');s.style.display='block';if(result.folderUrl){document.getElementById('drive-folder-link').href=result.folderUrl;}}
-else{throw new Error(result.message||'خطأ غير معروف');}
-}catch(err){errEl.textContent='❌ حدث خطأ: '+err.message+' — يرجى المحاولة مرة أخرى';errEl.style.display='block';btn.disabled=false;btn.classList.remove('loading');}
-});
+const res=await fetch(APPS_SCRIPT_URL,{method:'POST',mode:'no-cors',body:JSON.stringify(payload)});
+await new Promise(r=>setTimeout(r,2000));
+document.getElementById('main-form').style.display='none';
+const s=document.getElementById('success-screen');s.style.display='block';
+}catch(err){
+errEl.textContent='❌ حدث خطأ: '+err.message;errEl.style.display='block';btn.disabled=false;btn.classList.remove('loading');
+}});
 function toBase64(file){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(file);});}
 </script>
 </body>
